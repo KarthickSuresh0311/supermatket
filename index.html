@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b6b52" />
+    <title>Marutham Market — Groceries, delivered fresh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="offer-bar">Free delivery on orders above ₹499 <span>•</span> Freshness guaranteed</div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Marutham Market home"><span class="brand-mark">m</span><span>marutham<small>MARKET</small></span></a>
+      <button class="location" id="locationButton" type="button"><span>⌖</span><span><small>DELIVERING TO</small><b id="locationLabel">Chennai</b></span><span>⌄</span></button>
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search for rice, fruits, snacks..." /><kbd>⌘ K</kbd></label>
+      <div class="header-actions"><button type="button" id="accountButton" aria-label="Account">♙<span>Account</span></button><button type="button" id="cartButton" class="cart-button" aria-label="Open cart">▢<span>Cart</span><b id="cartCount">0</b></button></div>
+    </header>
+    <nav class="nav"><a href="#shop">Shop all</a><a href="#deals">Today's deals</a><a href="#fresh">Fresh picks</a><a href="#shop">Pantry</a><a href="#shop">Home & care</a><a href="#story">Our story</a></nav>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy"><p class="eyebrow">ROOTED IN TAMIL NADU</p><h1>Good food,<br /><em>thoughtfully</em> chosen.</h1><p>From just-harvested vegetables to everyday essentials, your neighbourhood market arrives at your door.</p><div><a class="primary" href="#shop">Shop groceries <span>→</span></a><button class="text-button" id="howItWorks" type="button">How it works <span>↗</span></button></div><div class="hero-notes"><span>✓ Handpicked daily</span><span>✓ Same-day delivery</span><span>✓ Local favourites</span></div></div>
+        <div class="hero-image"><div class="sun"></div><div class="hero-badge"><b>90 min</b><span>delivery slot</span></div><div class="hero-price"><span>STARTING AT</span><b>₹29</b><small>for seasonal produce</small></div></div>
+      </section>
+      <section class="trust"><span>✦ <b>100%</b> quality checked</span><span>◌ <b>7 days</b> easy returns</span><span>♧ <b>2000+</b> happy families</span><span>♙ <b>4.8/5</b> customer rating</span></section>
+      <section class="section" id="fresh"><div class="section-head"><div><p class="eyebrow">SHOP BY AISLE</p><h2>Everything for your table</h2></div><button class="link-button" id="viewAllCategories">View all categories →</button></div><div class="categories" id="categories"></div></section>
+      <section class="deals" id="deals"><div><p class="eyebrow">THIS WEEK'S HARVEST</p><h2>Fresh deals, just for you</h2><p>Small-batch finds and everyday favourites at prices you’ll love.</p><a href="#shop" class="primary light">Explore all deals <span>→</span></a></div><div class="deal-cards"><article><span>UP TO</span><b>30%<small>OFF</small></b><p>on farm fresh vegetables</p></article><article><span>BUY 2, GET</span><b>1<small>FREE</small></b><p>on selected pantry staples</p></article></div></section>
+      <section class="section shop" id="shop"><div class="section-head"><div><p class="eyebrow">THE DAILY BASKET</p><h2>Popular this week</h2></div><div class="filters" id="filters"></div></div><div class="products" id="products"></div></section>
+      <section class="story" id="story"><div class="story-art"><span class="arch arch-one"></span><span class="arch arch-two"></span><span class="tomato">●</span><span class="leaf">❦</span></div><div><p class="eyebrow">OUR PROMISE</p><h2>A little closer<br />to the source.</h2><p>Marutham is named after the fertile landscapes that feed us. We work with trusted growers and makers across Tamil Nadu to bring more goodness to your everyday.</p><button class="link-button" id="storyButton">Read our story →</button></div></section>
+      <section class="newsletter"><div><p class="eyebrow">THE MARUTHAM LETTER</p><h2>Fresh news from the market.</h2></div><form id="newsletterForm"><input aria-label="Email address" type="email" required placeholder="Your email address" /><button class="primary" type="submit">Sign me up →</button></form></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">m</span><span>marutham<small>MARKET</small></span></a><p>Good food, thoughtfully chosen.</p><div><a href="#shop">Shop</a><a href="#story">About us</a><a href="#top">Help centre</a></div><small>© 2026 Marutham Market. A demonstration storefront.</small></footer>
+    <aside class="cart-panel" id="cartPanel" aria-hidden="true"><div class="cart-head"><h2>Your basket <small id="cartSubline">0 items</small></h2><button id="closeCart" aria-label="Close cart">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer"><div><span>Subtotal</span><b id="cartTotal">₹0</b></div><small id="deliveryNote">Add ₹499 for free delivery</small><button class="primary checkout" id="checkoutButton">Checkout securely →</button></div></aside><div id="scrim" class="scrim"></div>
+    <dialog id="modal"><button id="modalClose" class="modal-close" aria-label="Close">×</button><div id="modalContent"></div></dialog><div id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
