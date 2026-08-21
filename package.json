@@ -1,0 +1,27 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "A responsive, interactive supermarket demo for Tamil Nadu. It is built with vanilla HTML, CSS, and JavaScript, so it has no installation step.",
+  "main": "app.js",
+  "scripts": {
+    "build:speed-insights": "esbuild speed-insights-init.js --bundle --format=iife --outfile=speed-insights-bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarthickSuresh0311/supermatket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarthickSuresh0311/supermatket/issues"
+  },
+  "homepage": "https://github.com/KarthickSuresh0311/supermatket#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
