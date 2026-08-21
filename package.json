@@ -1,0 +1,21 @@
+{
+  "name": "marutham-market",
+  "version": "1.0.0",
+  "description": "Marutham Market - A demonstration grocery storefront",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "supermarket",
+    "grocery",
+    "demo",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
