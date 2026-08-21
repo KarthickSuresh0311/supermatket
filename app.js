@@ -9,9 +9,17 @@ const products=[
  {id:8,name:'Moringa Leaf Powder',unit:'100 g',price:99,image:'https://images.unsplash.com/photo-1771643033515-0028fd03b708?auto=format&fit=crop&w=900&q=80',category:'Pantry',tag:'NEW'}
 ];
 const categories=[['Fresh fruits','🍊'],['Fresh vegetables','🥬'],['Dairy & eggs','🥛'],['Pantry','🫘'],['Snacks','🍘'],['Home & care','🧼']];
+const categoryImages={
+ 'Fresh fruits':'https://images.unsplash.com/photo-1721400500658-73222904fc5d?auto=format&fit=crop&w=900&q=80',
+ 'Fresh vegetables':'https://images.unsplash.com/photo-1742887214150-31a6c3d8acb8?auto=format&fit=crop&w=900&q=80',
+ 'Dairy & eggs':'https://images.unsplash.com/photo-1737049307677-0d4f7264cef3?auto=format&fit=crop&w=900&q=80',
+ 'Pantry':'https://www.anarkali.com.sg/wp-content/uploads/2022/07/Anarkali-Ponni-Rice-5kg.jpg',
+ 'Snacks':'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=900&q=80',
+ 'Home & care':'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=80'
+};
 let active='All';let cart=JSON.parse(localStorage.getItem('marutham-cart')||'{}');
 const $=s=>document.querySelector(s),money=n=>`₹${n.toLocaleString('en-IN')}`;
-function renderCategories(){ $('#categories').innerHTML=categories.map(([name,emoji])=>`<button class="category" data-category="${name}"><span class="emoji">${emoji}</span><span>${name}</span></button>`).join(''); }
+function renderCategories(){ $('#categories').innerHTML=categories.map(([name])=>`<button class="category" data-category="${name}"><span class="category-photo"><img src="${categoryImages[name]}" alt="${name}" loading="lazy"></span><span>${name}</span></button>`).join(''); }
 function renderFilters(){const choices=['All',...categories.map(x=>x[0])];$('#filters').innerHTML=choices.map(x=>`<button class="${active===x?'active':''}" data-filter="${x}">${x}</button>`).join('')}
 function renderProducts(){let q=$('#searchInput').value.toLowerCase();let list=products.filter(p=>(active==='All'||p.category===active)&&p.name.toLowerCase().includes(q));$('#products').innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-image" data-view="${p.id}"><img src="${p.image}" alt="${p.name}" loading="lazy"></div>${p.tag?`<span class="tag">${p.tag}</span>`:''}<h3>${p.name}</h3><span class="unit">${p.unit}</span><div class="product-bottom"><span class="price"><b>${money(p.price)}</b>${p.old?`<s>${money(p.old)}</s>`:''}</span><button class="add" data-add="${p.id}">ADD +</button></div></article>`).join(''):`<p>No market finds match “${q}”. Try another search.</p>`}
 function add(id){cart[id]=(cart[id]||0)+1;persist();showToast(`${products.find(p=>p.id===id).name} added to basket`)}
