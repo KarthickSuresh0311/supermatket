@@ -6,7 +6,9 @@ const products=[
  {id:5,name:'Nendran Banana',unit:'500 g',price:45,image:'https://images.unsplash.com/photo-1721400500658-73222904fc5d?auto=format&fit=crop&w=900&q=80',category:'Fresh fruits'},
  {id:6,name:'Cold Pressed Gingelly Oil',unit:'1 litre',price:279,image:'https://images.squarespace-cdn.com/content/v1/63c0d25191ac722db950a90c/305ad5e8-fe23-4b5a-b53a-5a6bfd715b1c/Double%2BPagoda%2BSesame.jpg?format=1500w',category:'Pantry'},
  {id:7,name:'Coorg Filter Coffee',unit:'250 g',price:185,image:'https://coffeego.in/cdn/shop/articles/Degreecoffee_1200x1200.jpg?v=1676525152',category:'Beverages'},
- {id:8,name:'Moringa Leaf Powder',unit:'100 g',price:99,image:'https://images.unsplash.com/photo-1771643033515-0028fd03b708?auto=format&fit=crop&w=900&q=80',category:'Pantry',tag:'NEW'}
+ {id:8,name:'Moringa Leaf Powder',unit:'100 g',price:99,image:'https://images.unsplash.com/photo-1771643033515-0028fd03b708?auto=format&fit=crop&w=900&q=80',category:'Pantry',tag:'NEW'},
+ {id:9,name:'Moru Moru Murukku',unit:'200 g',price:65,image:'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=900&q=80',category:'Snacks',tag:'LOCAL FAVOURITE'},
+ {id:10,name:'Beegreen Floor Cleaner',unit:'500 ml',price:199,image:'https://www.jiomart.com/images/product/original/rvmvjjuyda/beegreen-natural-floor-cleaner-multi-purpose-500-ml-eco-friendly-biodegradable-limescale-remover-100-plant-based-non-toxic-chemical-free-family-safe-all-purpose-green-cleaner-product-images-orvmvjjuyda-p609414989-0-202406201925.jpg?im=Resize%3D%28420%2C420%29',category:'Home & care',tag:'ECO PICK'}
 ];
 const categories=[['Fresh fruits','🍊'],['Fresh vegetables','🥬'],['Dairy & eggs','🥛'],['Pantry','🫘'],['Snacks','🍘'],['Home & care','🧼']];
 const categoryImages={
